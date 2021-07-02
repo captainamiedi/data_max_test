@@ -40,11 +40,11 @@
   <p>showing {{pageNum}} to 10 of 12 entries</p>
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">
-    <li class="page-item" v-bind:class="{ disabled: pageNum === 1 }" @click="changePageNumber(pageNum - 1)">
+    <li class="page-item" v-bind:class="{ disabled: pageNum === 1}" @click="changePageNumber(pageNum - 1)">
       <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
     </li>
-    <li class="page-item" v-bind:class="{ disabled: pageNum === 1 }" @click="changePageNumber(1)"><a class="page-link" href="#">1</a></li>
-    <li class="page-item" v-bind:class="{ disabled: pageNum === 2 }" @click="changePageNumber(2)"><a class="page-link" href="#">2</a></li>
+    <li class="page-item" v-bind:class="{ disabled: pageNum === 1, 'active': pageNum === 1  }" @click="changePageNumber(1)"><a class="page-link" href="#">1</a></li>
+    <li class="page-item" v-bind:class="{ disabled: pageNum === 2, 'active': pageNum === 2  }" @click="changePageNumber(2)"><a class="page-link" href="#">2</a></li>
     <li class="page-item" v-bind:class="{ disabled: pageNum === 2 }" @click="changePageNumber(pageNum + 1)">
       <a class="page-link" href="#">Next</a>
     </li>

@@ -2,7 +2,14 @@
 
 ## Project setup
 ```
-npm install
+# Clone this repository
+$ git clone https://github.com/captainamiedi/data_max_test.git
+
+# Go into the repository directory
+$ cd data_max_test
+
+# Install dependencies
+$ npm install
 ```
 
 ### Compiles and hot-reloads for development
