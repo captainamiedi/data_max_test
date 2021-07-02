@@ -68,14 +68,14 @@ export default {
   created(){
     fetch(`https://www.anapioficeandfire.com/api/books?page=${this.pageNum}&pageSize=10`).then(response => response.json())
     .then(res => {
-      console.log(res, 'resp');
+      // console.log(res, 'resp');
       this.data = res
     });
   },
  watch: {
     search: function() {
       this.filterByName(this.search)
-      console.log(this.search)
+      // console.log(this.search)
     },
     pageNum: function() {
       this.getBooks()
@@ -85,13 +85,11 @@ export default {
     filterByName: function(val) {
       fetch(`https://www.anapioficeandfire.com/api/books?name=${val}`).then(response => response.json())
     .then(res => {
-      console.log(res, 'resp');
+      // console.log(res, 'resp');
       this.data = res
     });
     },
     changePageNumber: function (value){
-      console.log(value, 'value');
-      console.log(this.pageNum, 'pagenum');
       if (this.pageNum < 0 ){
         return null
       }
@@ -103,7 +101,7 @@ export default {
     getBooks: function(){
       fetch(`https://www.anapioficeandfire.com/api/books?page=${this.pageNum}&pageSize=10`).then(response => response.json())
         .then(res => {
-      console.log(res, 'resp');
+      // console.log(res, 'resp');
       this.data = res
     });
     }
